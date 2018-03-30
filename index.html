@@ -62,7 +62,7 @@
 
   <div class="demo"></div>
 
-  <div class="setup-open">
+  <div class="setup-open" tabindex="0">
     <img src="./img/user-1.jpg" class="setup-open-icon">
   </div>
 </header>
@@ -86,7 +86,7 @@
         </label>
       </div>
 
-      <span class="setup-close">&times;</span>
+      <span class="setup-close" tabindex="0">&times;</span>
     </div>
 
 
@@ -181,6 +181,25 @@
   </div>
 </template>
 
+<script>
+  var fireballSize = 22;
+  var wizardSpeed = 3;
+  var wizardWidth = 70;
+  var getFireballSpeed = function(left) {
+    return left ? 5 : 2;
+  }
+  var getWizardHeight = function(widthOfWizard) {
+    return 1.337 * widthOfWizard;
+  }
+  function getWizardX(width) {
+    return width / 2 - wizardWidth / 2;
+  }
+  function getWizardY(height) {
+    return height / 3 - getWizardHeight(wizardWidth) / 2;
+  }
+</script>
+<script src="js/stat.js"></script>
+<script src="js/setup.js"></script>
 <script src="js/game.js"></script>
 
 </body>
